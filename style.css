@@ -1,41 +1,93 @@
 body {
-  background-color: #FFF1DC;
-  font-style: normal;
-  padding: 30px;
-  font-family: "Playfair Display", serif;
+  background-color: #fff1dc;
+  font-family: "EB Garamond", serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+
 }
 
 h1 {
   text-align: center;
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: bold;
 }
+
 
 .navbar-brand {
   font-weight: 500;
-  color: #823222;
-  font-size: 22px;
+  color: #fff1dc;
+  font-size: 24px;
   transition: 0.3s color;
 }
 
 .navbar-toggler {
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
-.navbar-toggler:focus, .btn-close:focus {
+.navbar-toggler:focus,
+.btn-close:focus {
   box-shadow: none;
   outline: none;
 }
 
 .nav-link {
   color: #000;
-  font-weight: 400;
+  font-weight: 500;
+  padding: 20px;
+  font-size: 20px;
 
 }
 
-.nav-link:hover, .nav-link.active {
-  color: #823222;
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
 }
 
+.hero-section {
+  background: url(../images/flowers.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+
+}
+
+.hero-section::before {
+  background-color: rgba(0, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.hero-section .container {
+  height: 100vh;
+  z-index: 1;
+  position: relative;
+
+}
+
+.hero-section h1{
+  font-size: 1.5em;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@media (min-width: 992px) {
+
+  .nav-link {
+    color: #fff1dc;
+    font-weight: 500;
+    padding: 20px;
+
+  }
+
+  
+}

@@ -24,6 +24,7 @@ tab_size = 2
 ; enter your terminal preferences here...
 
 [preview]
+index_file = pages/index.html
 ; enter your preview preferences here...
 
 [emmet]
