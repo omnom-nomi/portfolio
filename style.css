@@ -4,7 +4,6 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-
 }
 
 h1 {
@@ -15,6 +14,19 @@ h1 {
   font-style: bold;
 }
 
+.navbar.fixed-top {
+  transition: top 0.3s;
+}
+
+.navbar.fixed-top.sticky{
+  top: -50px;
+}
+
+.fixed-top{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
 
 .navbar-brand {
   font-weight: 500;
@@ -35,7 +47,7 @@ h1 {
 }
 
 .nav-link {
-  color: #000;
+  color: #93837a;
   font-weight: 500;
   padding: 20px;
   font-size: 20px;
@@ -80,7 +92,7 @@ h1 {
   transform: translate(-50%,-50%);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 991px) {
 
   .nav-link {
     color: #fff1dc;
@@ -88,6 +100,5 @@ h1 {
     padding: 20px;
 
   }
-
   
 }

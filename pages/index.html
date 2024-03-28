@@ -69,6 +69,25 @@
     </div>
   </section>
 
+  <h1> Naomi Moris</h1>
+  <h3> 2nd Year Computer Science Student</h3>
+  
+  
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      const heroSection = document.querySelector('.hero-section');
+      const heroSectionBottom = heroSection.getBoundingClientRect().bottom + window.pageYOffset;
+
+      if (window.pageYOffset >= heroSectionBottom - 80) {
+        navbar.classList.add('sticky');
+      } else {
+        navbar.classList.remove('sticky');
+      }
+    });
+  </script>
+
 </body>
 
 </html>
