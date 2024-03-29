@@ -84,37 +84,6 @@
     technology to tackle real-world challenges. I wish to contribute positively to society while continually learning as
     a computer science student</p>
 
-  <h1>Featured Projects</h1>
-
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <img src="../images/rpg.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">2D RPG</h5>
-          <p class="card-text">Created a 2D RPG based on a popular webcomic.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="../images/database.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Database</h5>
-          <p class="card-text">Created a database for a cycling company.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="../images/website.png" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Tourism website</h5>
-          <p class="card-text">Created a tourism website for my hometown.</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <h1>Skills</h1>
 
@@ -134,7 +103,25 @@
     </a>
   </div>
 
+  <button onclick="topFunction()" id="myBtn">Top</button>
+
   <script>
+    let mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+  
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  
     window.addEventListener('scroll', function() {
       const navbar = document.querySelector('.navbar');
       const heroSection = document.querySelector('.hero-section');

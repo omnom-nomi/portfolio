@@ -26,9 +26,36 @@ p {
   font-size: 24px;
 }
 
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #722d16;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+#myBtn:hover {
+  background-color: #93837a;
+  transition: 0.3s;
+}
+
+.card {
+  max-width: 100%;
+}
+
 .list-group {
   text-align: center;
   font-size: 18px;
+  padding-bottom: 20px;
 }
 
 .card-img-overlay {
@@ -49,7 +76,6 @@ p {
   border-radius: 2px;
   cursor: pointer;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .cta-button:hover {
