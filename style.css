@@ -70,6 +70,7 @@ p {
 
 }
 
+
 .section {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -221,6 +222,14 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.about-page{
+  background-image: url(../images/veldhoven.jpg);
+}
+
+.contact-page {
+  background-image: url(../images/amsterdam.jpg);
 }
 
 @media (min-width: 991px) {
