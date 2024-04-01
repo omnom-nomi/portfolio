@@ -70,11 +70,17 @@ p {
 
 }
 
+.section {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 30px 0;
+}
+
 .footer-content p {
   margin: 12px auto;
 }
 
-.social-media{
+.social-media {
   list-style: none;
   display: flex;
   align-items: center;
