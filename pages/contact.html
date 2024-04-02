@@ -34,6 +34,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
     integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
   </script>
+    <script type="module">
+    // Initialization for ES Users
+    import { Input, Ripple, initMDB } from "mdb-ui-kit";
+
+    initMDB({ Input, Ripple });
+  </script>
+
 
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg fixed-top">
@@ -70,6 +77,24 @@
       <h1>Contact</h1>
     </div>
   </section>
+
+  <section class="section">
+    <div class="container">
+      <p>Thank you for reading my portfolio. Whether you have a question, feedback, or just want to say hello, I'm here
+        to help.
+        Feel free to contact me via email, phone, or live webchat below. I look forward to hearing from you!</p>
+      <h1> Want to live chat?</h1>
+      <p> Click the button below</p>
+
+      <div class="cta-container">
+        <a class="cta-button" href="about.html">
+          <span>Live Chat</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
 
   <footer>
     <div class="footer-content">
