@@ -56,3 +56,80 @@
   padding: 5px 0px;
   display: inline-block;
 }
+
+.screen .form-input label{
+  display: block;
+  margin-bottom: 5px;
+
+}
+
+.screen .form-input input{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b79b8c;
+  font-size: 18px;
+}
+
+.screen .form-input button{
+  padding: 10px 20px;
+  background: #baaca3;
+  color: #785c5a;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.chat-screen .header{
+  background: #785c5a;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.chat-screen .header .logo{
+  font-size: 20px;
+  color: #dccdc6;
+  font-weight: 600;
+}
+
+.chat-screen .header #exit-chat{
+  padding: 5px 10px;
+  border: 1.2px solid #b79b8c;
+  background: transparent;
+  color: #dccdc6;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+}
+
+.chat-screen .messages {
+  width: 100%;
+  height: calc(100% - 100px);
+  background: #f5f5f5;
+  overflow: auto;
+}
+
+.chat-screen .messages .message{
+  display: flex;
+  padding: 10px;
+}
+
+
+.chat-screen .messages .message > div{
+  max-width: 80%;
+  background: #dccdc6;
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.05);
+  padding: 10px;
+}
+
+.chat-screen .messages .message.my-message{
+  justify-content: flex-end;
+}
+
+.chat-screen .messages .message.other-message{
+  justify-content: flex-start;
+}
