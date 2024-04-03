@@ -1,37 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Socket.io simple chat</title>
-  <link rel="stylesheet" href="/css/demo.css" />
+  <link rel="stylesheet" href="css/demo.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-  <div class="sidenav">
-    <div class="inbox__people">
-      <h4>Active users</h4>
+<div class="webchat">
+  <div class="screen join-screen active">
+    <div class="form">
+      <h1>Welcome to the chatroom</h1>
+      <div class="form-input">
+        <label>Name</label>
+        <input type="text" id="name">
+      </div>
+      <div class="form-input">
+        <button id="join-user">Join Now</button>
+      </div>
     </div>
   </div>
+  <div class="screen chat-screen">
+    <div class="header">
+      <div class="logo">Chatroom</div>
+      <button id="exit-chat">Exit</button>
+    </div>
+    <div class="messages">
+      <!-- Example message -->
+      <div class="message my-message">
+        <div>
+          <div class="username">You</div>
+          <div class="text">Hello</div>
+        </div>
+      </div>
+      <div class="update">
+        A has joined
+      </div>
+      <div class="message other-message">
+        <div>
+          <div class="username">A</div>
+          <div class="text">Hi</div>
+        </div>
+      </div>
+    </div>
+    <div class="messagebox">
+      <input type="text" id="message-input">
+      <button id="send-message">Send</button>
+    </div>
 
-  <br>
-  <hr>
-
-  <div class="content">
-    <div class="messages__history"></div>
-    <div class="fallback"></div>
-    <div class="inbox__messages"></div>
-
-    <form class="message_form">
-      <input type="text" class="message_form__input" placeholder="Type a message" />
-      <button class="message_form__button" type="submit">Enter</button>
-    </form>
   </div>
+</div>
 
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/js/client.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/client.js"></script>
+
 </body>
-
-
 
 </html>
