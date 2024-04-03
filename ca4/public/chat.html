@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Socket.io simple chat</title>
+  <title>Webchat</title>
   <link rel="stylesheet" href="css/demo.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,47 +16,50 @@
 <body>
 
 <div class="webchat">
-  <div class="screen join-screen active">
-    <div class="form">
-      <h1>Welcome to the chatroom</h1>
-      <div class="form-input">
-        <label>Name</label>
-        <input type="text" id="name">
-      </div>
-      <div class="form-input">
-        <button id="join-user">Join Now</button>
-      </div>
+<div class="screen join-screen active">
+  <div class="form">
+    <h2>Join Webchat</h2>
+    <div class="form-input">
+      <label>Name</label>
+      <input type="text" id="username">
     </div>
+  <div class="form-input">
+    <button id="join-user">Join</button>
   </div>
+  </div>
+</div>
+
   <div class="screen chat-screen">
     <div class="header">
-      <div class="logo">Chatroom</div>
+      <div class="logo">WebChat</div>
       <button id="exit-chat">Exit</button>
     </div>
     <div class="messages">
-      <!-- Example message -->
+      <!--Example messages-->
       <div class="message my-message">
         <div>
-          <div class="username">You</div>
-          <div class="text">Hello</div>
-        </div>
-      </div>
-      <div class="update">
-        A has joined
-      </div>
-      <div class="message other-message">
-        <div>
-          <div class="username">A</div>
+          <div class="name">You</div>
           <div class="text">Hi</div>
         </div>
       </div>
+      <div class="update">
+        A has joined the chat
+      </div>
+      <div class="message other-message">
+        <div>
+          <div class="name">A</div>
+          <div class="text">Hello</div>
+        </div>
+      </div>
     </div>
-    <div class="messagebox">
+    <div class="chatbox">
       <input type="text" id="message-input">
       <button id="send-message">Send</button>
     </div>
 
+
   </div>
+
 </div>
 
 <script src="/socket.io/socket.io.js"></script>

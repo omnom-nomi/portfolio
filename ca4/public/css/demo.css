@@ -5,7 +5,6 @@
   }
   
   body {
-    margin: 0;
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -23,4 +22,37 @@
   background: #dccdc6;
   border-left: 1px solid #a08075;
   border-right: 1px solid #a08075;
+}
+
+.webchat > .screen {
+  display: none;
+}
+
+.webchat > .screen.active{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.screen .form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  max-width: 400px;
+}
+
+.screen .form-input{
+  width: 100%;
+  margin: 20px 0px;
+}
+
+.screen h2{
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #785c5a;
+  border-bottom: 4px solid #b79b8c;
+  padding: 5px 0px;
+  display: inline-block;
 }
