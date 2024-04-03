@@ -1,6 +1,6 @@
 (function (){
     const webchat = document.querySelector(".webchat");
-    const socket = io(); // Make sure you have initialized socket.io correctly
+    const socket = io();
 
     let uname;
 
@@ -15,4 +15,44 @@
         webchat.querySelector(".join-screen").classList.remove("active");
         webchat.querySelector(".chat-screen").classList.add("active");
     });
+
+    webchat.querySelector(".chat-screen #send-message").addEventListener("click", function(){
+        let message = webchat.querySelector(".chat-screen #message-input").value;
+        if (message.length == 0){
+            return;
+        }
+
+        renderMessage("my", {
+            username: uname,
+            text: message
+        });
+
+        socket.emit("chat",{
+            username: uname,
+            text: message
+        });
+        webchat.querySelector(".chat-screen #message-input").value = "";
+    });
+
+    function renderMessage(type,message){
+        let messageContainer = webchat.querySelector(".chat-screen .messages");
+        if (type == "my"){
+            let x = document.createElement("div");
+            x.setAttribute("class", "message my-message");
+            x.innerHTML = `<div><div class="name">You<div class="text">${message.text}</div> </div> </div>`;
+            messageContainer.appendChild(x);
+        } else if (type == "other") {
+            let x = document.createElement("div");
+            x.setAttribute("class", "message other-message");
+            x.innerHTML = `<div><div class="name">${message.username}<div class="text">${message.text}</div> </div> </div>`;
+            messageContainer.appendChild(x);
+        } else if(type == "update"){
+            let x = document.createElement("div");
+            x.setAttribute("class", "update");
+            x.innerHTML = message;
+            messageContainer.appendChild(x);
+        }
+        //scroll chat to the end
+        messageContainer.scrollTop = messageContainer.scrollHeight - messageContainer.clientHeight;
+    }
 })();

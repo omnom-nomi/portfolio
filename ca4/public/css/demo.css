@@ -135,7 +135,7 @@
 }
 
 .chat-screen .messages .message .name{
-  font-size: 12px;
+  font-size: 16px;
   color: #785c5a;
   margin-bottom: 5px;
 }
@@ -159,7 +159,7 @@
 .chat-screen .chatbox input{
   flex: 1;
   height: 50px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .chat-screen .chatbox button{
