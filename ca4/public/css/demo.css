@@ -15,21 +15,21 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: #402618;
     overflow-x: hidden;
   }
 
   /*make the active user text inherit style from container*/
 
   .inbox__people{
-      color: white;
+      color: #efd3bd;
       padding: 16px;
   }
   
   
   /* Side navigation links */
   .sidenav a {
-    color: white;
+    color: #efd3bd;
     padding: 16px;
     text-decoration: none;
     display: block;

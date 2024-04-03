@@ -4,6 +4,20 @@ const socket = io();
 
 const inboxPeople = document.querySelector(".inbox__people");
 
+const userDetailsForm = document.getElementById("userDetailsForm");
+
+userDetailsForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(userDetailsForm);
+  const name = formData.get("name");
+  const email = formData.get("email");
+  const phone = formData.get("phone");
+
+  socket.emit("user details", { name, email, phone });
+});
+
+
 
 let userName = "";
 let id;
