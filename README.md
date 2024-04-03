@@ -2,11 +2,11 @@
 
 ## Development Approach
 
-I built this portfolio website using HTML, CSS, and JavaScript. The goal was to make an engaging and user-friendly website. The website has three main pages: Home, About, and Chat Application.
+I built this portfolio website using HTML, CSS, and JavaScript. The goal was to make an engaging and user-friendly website. The website has three main pages: Home, About, and Contact (with the LiveChat application).
 
 For the chat application, I set up a client-server system using Socket.IO. Socket.IO allows real-time, two-way communication between the client (web browser) and the server.
 
-My development process went through several steps, as shown in the GitHub commit history:
+My development process went through several steps:
 
 1. Set up the basic website structure with the homepage, about page, and contact page.
 2. Added navigation and UI elements like a sticky navbar and banners.
@@ -51,7 +51,6 @@ I used Socket.IO for the client-server communication in the chat application. So
 - **Front-end**: HTML5, CSS3, JavaScript
 - **Back-end**: Node.js
 - **Real-time Communication**: Socket.IO
-- **Deployment**: I hosted the website and chat application on a server using [hosting platform].
 
 Overall, building this portfolio website with a chat application involved using both front-end and back-end technologies. The focus was on creating an engaging user experience through real-time communication and responsive design.
 
