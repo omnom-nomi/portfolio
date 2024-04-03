@@ -32,10 +32,6 @@ io.on("connection", function (socket) {
       activeUsers.delete(socket.userId);
       io.emit("user disconnected", socket.userId);
     });
-
-  socket.on("user details", function(data){
-    console.log("Received user details:", data);
-  });
  
     socket.on("chat message", function (data) {
       io.emit("chat message", data);
