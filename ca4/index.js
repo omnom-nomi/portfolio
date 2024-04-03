@@ -12,11 +12,11 @@ const io = require("socket.io")(server);
 
 io.on("connection", function (socket) {
   socket.on("newUser", function (username){
-    socket.broadcast.emit("update", username + "joined the webchat");
+    socket.broadcast.emit("update", username + " joined the webchat");
   });
 
   socket.on("exitUser", function (username){
-    socket.broadcast.emit("update", username + "left the webchat");
+    socket.broadcast.emit("update", username + " left the webchat");
   });
 
   socket.on("chat", function (message){

@@ -35,11 +35,17 @@
     });
 
     webchat.querySelector(".chat-screen #exit-chat").addEventListener("click", function (){
-        socket.emit("exitUser, uname");
+        socket.emit("exitUser", uname);
         window.location.href = window.location.href;
     })
 
-    
+    socket.on("update", function (update){
+        renderMessage("update", update);
+    });
+
+    socket.on("chat", function (message){
+        renderMessage("other", message);
+    });
 
     function renderMessage(type,message){
         let messageContainer = webchat.querySelector(".chat-screen .messages");
