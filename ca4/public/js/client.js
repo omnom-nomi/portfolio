@@ -34,6 +34,13 @@
         webchat.querySelector(".chat-screen #message-input").value = "";
     });
 
+    webchat.querySelector(".chat-screen #exit-chat").addEventListener("click", function (){
+        socket.emit("exitUser, uname");
+        window.location.href = window.location.href;
+    })
+
+    
+
     function renderMessage(type,message){
         let messageContainer = webchat.querySelector(".chat-screen .messages");
         if (type == "my"){
